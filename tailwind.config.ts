@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        elegant: ['Cormorant Garamond', 'serif'],
-        body: ['Outfit', 'sans-serif'],
+        display: ['Oswald', 'sans-serif'],
+        elegant: ['Barlow Condensed', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -52,12 +52,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
+        neon: {
+          DEFAULT: "hsl(var(--neon))",
+          light: "hsl(var(--neon-light))",
+          dark: "hsl(var(--neon-dark))",
         },
-        amber: "hsl(var(--amber))",
+        electric: {
+          DEFAULT: "hsl(var(--electric))",
+          light: "hsl(var(--electric-light))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -91,13 +94,13 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
-        "shimmer": {
-          "0%": { backgroundPosition: "-200% 0" },
-          "100%": { backgroundPosition: "200% 0" },
+        "pulse-neon": {
+          "0%, 100%": { boxShadow: "0 0 15px hsl(120 100% 45% / 0.2)" },
+          "50%": { boxShadow: "0 0 30px hsl(120 100% 45% / 0.4)" },
         },
-        "pulse-gold": {
-          "0%, 100%": { boxShadow: "0 0 15px hsl(40 80% 55% / 0.2)" },
-          "50%": { boxShadow: "0 0 30px hsl(40 80% 55% / 0.4)" },
+        "glow-pulse": {
+          "0%, 100%": { textShadow: "0 0 10px hsl(120 100% 45% / 0.5)" },
+          "50%": { textShadow: "0 0 20px hsl(120 100% 45% / 0.8), 0 0 40px hsl(120 100% 45% / 0.3)" },
         },
       },
       animation: {
@@ -105,8 +108,8 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.8s ease-out forwards",
         "fade-in": "fade-in 0.6s ease-out forwards",
-        "shimmer": "shimmer 3s linear infinite",
-        "pulse-gold": "pulse-gold 2s ease-in-out infinite",
+        "pulse-neon": "pulse-neon 2s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
       },
     },
   },
